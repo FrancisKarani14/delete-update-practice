@@ -10,7 +10,7 @@ function createCard(member) {
     <h3>${member.name}</h3>
     <h4>Member Contribution KSH${member.contribution}</h4>
     <button class="deleteBtn" data-id="${member.id}">Delete</button>
-    <button class="updateBtn">update</button>
+    <button class="updateBtn" data-id="${member.id}">update</button>
     </div>
     `
    
@@ -83,7 +83,7 @@ function deleteMember(memberID){
         method:"DELETE",
     })
     .then(()=>{
-        const card = document.querySelector(`.divCard[data-id="${memberID}]`);
+        const card = document.querySelector(`.divCard[data-id="${memberID}"]`);
         if (card) {
             card.remove();
             
@@ -91,4 +91,60 @@ function deleteMember(memberID){
 
     })
     .catch(err => console.error("Delete error:", err));
+}
+// update handler
+// Event delegation that listens to clicks
+displaySection.addEventListener("click", (e)=>{
+if(e.target.classList.contains("updateBtn")){
+const memberId = e.target.dataset.id;
+
+fetch(`http://localhost:3000/members/${memberId}`)
+.then(res=>res.json())
+.then(data=>{
+    nameInput.value=data.name;
+    contributionInput.value=data.contribution;
+    updateId=memberId;
+    addUpdateButton()
+})
+.catch(err => console.error("Fetch single member error:", err));
+}
+})
+function addUpdateButton() {
+  if (document.getElementById("confirmUpdate")) return;
+
+  const updateBtn = document.createElement("button");
+  updateBtn.id = "confirmUpdate";
+  updateBtn.textContent = "Confirm Update";
+  updateBtn.style.background = "#e67e22";
+  updateBtn.style.color = "#fff";
+  updateBtn.style.padding = "10px 16px";
+  updateBtn.style.marginTop = "10px";
+  updateBtn.style.border = "none";
+  updateBtn.style.borderRadius = "5px";
+  updateBtn.style.cursor = "pointer";
+
+  form.appendChild(updateBtn);
+
+  updateBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const updatedData = {
+      name: nameInput.value,
+      contribution: contributionInput.value
+    };
+
+    fetch(`http://localhost:3000/members/${updateId}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedData)
+    })
+      .then(res => res.json())
+      .then(() => {
+        fetchMembers();        
+        form.reset();          
+        updateBtn.remove();    
+        updateId = null;       
+      })
+      .catch(err => console.error("Update error:", err));
+  });
 }

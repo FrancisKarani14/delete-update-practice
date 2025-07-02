@@ -11,9 +11,9 @@
       "contribution": 3000
     },
     {
-      "id": 4,
       "name": "David Kipkoech",
-      "contribution": 2500
+      "contribution": "25000",
+      "id": 4
     },
     {
       "id": 5,
@@ -41,14 +41,14 @@
       "contribution": 4800
     },
     {
-      "name": "Francis Karani",
-      "contribution": "4500",
-      "id": 11
-    },
-    {
       "name": "Charles Karani",
       "contribution": "10000",
       "id": 12
+    },
+    {
+      "name": "Racheal Karani",
+      "contribution": "10000",
+      "id": 13
     }
   ]
 }
