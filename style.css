@@ -4,5 +4,17 @@
     padding: 0%;
 }
 body{
+    height: 100vh;
     background-color: #d7dbdd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+.display-members{
+    justify-items: center;
+    
 }

@@ -1,0 +1,15 @@
+{
+    "memebers":[
+  { "name": "Alice Mwangi", "contribution": 5000 },
+  { "name": "Brian Otieno", "contribution": 3000 },
+  { "name": "Cynthia Njeri", "contribution": 4500 },
+  { "name": "David Kipkoech", "contribution": 2500 },
+  { "name": "Esther Wambui", "contribution": 7000 },
+  { "name": "Felix Mutiso", "contribution": 4000 },
+  { "name": "Grace Achieng", "contribution": 3500 },
+  { "name": "Henry Mugo", "contribution": 6000 },
+  { "name": "Irene Chebet", "contribution": 4800 },
+  { "name": "James Kilonzo", "contribution": 5200 }
+]
+
+}
