@@ -14,7 +14,22 @@ body{
 h1{
     text-align: center;
 }
+h2{
+    text-align: center;
+}
 .display-members{
+    display: flex;
+    flex-wrap: wrap;
     justify-items: center;
+    gap: 10px;
+    justify-content: center;
+
     
+}
+.divCard{
+    background-color: #fdfefe ;
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
 }
