@@ -1,10 +1,13 @@
 const displaySection = document.querySelector(".display-members")
+const addMemberBtn = document.querySelector(".addBtn")
 // function to create a card
 function createCard(member) {
     return `
     <div class="divCard" data-id="${member.id}">
     <h3>${member.name}</h3>
     <h4>Member Contribution KSH${member.contribution}</h4>
+    <button id="deletebtn">Delete</button>
+    <button id="updatebtn">update</button>
     </div>
     `
    
@@ -25,3 +28,10 @@ function createCard(member) {
     .catch(err => console.error("Fetch error:", err));
  }
  fetchMembers()
+//  add members on the list 
+form.addEventListener("submit", (Event)=>{
+    Event.preventDefault();
+    // create a way of getting input data
+    const 
+
+})
