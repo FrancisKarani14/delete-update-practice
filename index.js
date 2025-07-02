@@ -9,8 +9,8 @@ function createCard(member) {
     <div class="divCard" data-id="${member.id}">
     <h3>${member.name}</h3>
     <h4>Member Contribution KSH${member.contribution}</h4>
-    <button id="deletebtn">Delete</button>
-    <button id="updatebtn">update</button>
+    <button class="deleteBtn" data-id="${member.id}">Delete</button>
+    <button class="updateBtn">update</button>
     </div>
     `
    
@@ -63,10 +63,32 @@ fetch("http://localhost:3000/members",{
 
 postHandler()
 // delete handler
-function handleDelete() {
-    const deleteButton = document.querySelector("#deleteBtn")
-deleteButton.addEventListener("click", ()=>{
-    fetch
+// event delegation that listens to clicks on specific buttins
+displaySection.addEventListener("click", (e)=>{
+    if (e.target.classList.contains("deleteBtn")) {
+       const memberID = e.target.dataset.id;
+       const confirmDelete = confirm("are you sure you want to delete? deleting a member is permanent!")
+       if(confirmDelete){
+        deleteMember(memberID) 
+       }
+       
+    }
 })
-    
+//  the function for deleting a member
+
+function deleteMember(memberID){
+    // the fetch for delete
+     
+    fetch(`http://localhost:3000/members/${memberID}`,{
+        method:"DELETE",
+    })
+    .then(()=>{
+        const card = document.querySelector(`.divCard[data-id="${memberID}]`);
+        if (card) {
+            card.remove();
+            
+        }
+
+    })
+    .catch(err => console.error("Delete error:", err));
 }
