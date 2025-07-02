@@ -1,15 +1,64 @@
 {
-    "members":[
-  { "name": "Alice Mwangi", "contribution": 5000 },
-  { "name": "Brian Otieno", "contribution": 3000 },
-  { "name": "Cynthia Njeri", "contribution": 4500 },
-  { "name": "David Kipkoech", "contribution": 2500 },
-  { "name": "Esther Wambui", "contribution": 7000 },
-  { "name": "Felix Mutiso", "contribution": 4000 },
-  { "name": "Grace Achieng", "contribution": 3500 },
-  { "name": "Henry Mugo", "contribution": 6000 },
-  { "name": "Irene Chebet", "contribution": 4800 },
-  { "name": "James Kilonzo", "contribution": 5200 }
-]
-
+  "members": [
+    {
+      "id": 1,
+      "name": "Alice Mwangi",
+      "contribution": 5000
+    },
+    {
+      "id": 2,
+      "name": "Brian Otieno",
+      "contribution": 3000
+    },
+    {
+      "id": 3,
+      "name": "Cynthia Njeri",
+      "contribution": 4500
+    },
+    {
+      "id": 4,
+      "name": "David Kipkoech",
+      "contribution": 2500
+    },
+    {
+      "id": 5,
+      "name": "Esther Wambui",
+      "contribution": 7000
+    },
+    {
+      "id": 6,
+      "name": "Felix Mutiso",
+      "contribution": 4000
+    },
+    {
+      "id": 7,
+      "name": "Grace Achieng",
+      "contribution": 3500
+    },
+    {
+      "id": 8,
+      "name": "Henry Mugo",
+      "contribution": 6000
+    },
+    {
+      "id": 9,
+      "name": "Irene Chebet",
+      "contribution": 4800
+    },
+    {
+      "id": 10,
+      "name": "James Kilonzo",
+      "contribution": 5200
+    },
+    {
+      "name": "Francis Karani",
+      "contribution": "4500",
+      "id": 11
+    },
+    {
+      "name": "Charles Karani",
+      "contribution": "10000",
+      "id": 12
+    }
+  ]
 }

@@ -1,5 +1,8 @@
 const displaySection = document.querySelector(".display-members")
-const addMemberBtn = document.querySelector(".addBtn")
+const addMemberBtn = document.querySelector("#addBtn")
+const nameInput = document.querySelector("#name")
+const contributionInput = document.querySelector("#contribution")
+const form =document.querySelector("form")
 // function to create a card
 function createCard(member) {
     return `
@@ -29,9 +32,41 @@ function createCard(member) {
  }
  fetchMembers()
 //  add members on the list 
+function postHandler() {
+    
+
 form.addEventListener("submit", (Event)=>{
     Event.preventDefault();
     // create a way of getting input data
-    const 
-
+    const memberData ={
+        name:nameInput.value,
+        contribution:contributionInput.value
+    };
+    
+fetch("http://localhost:3000/members",{
+    method:"Post",
+    headers:{"content-type": "application/json"},
+    body:JSON.stringify(memberData)
 })
+.then(res => res.json())
+.then(data => {
+    displaySection.innerHTML+=createCard(data);
+    form.reset();
+})
+ .catch(err => console.error("POST error:", err));   
+    
+    
+
+
+});
+}
+
+postHandler()
+// delete handler
+function handleDelete() {
+    const deleteButton = document.querySelector("#deleteBtn")
+deleteButton.addEventListener("click", ()=>{
+    fetch
+})
+    
+}
