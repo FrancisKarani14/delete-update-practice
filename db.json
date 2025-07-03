@@ -6,9 +6,9 @@
       "contribution": 5000
     },
     {
-      "id": 2,
       "name": "Brian Otieno",
-      "contribution": 3000
+      "contribution": "3500",
+      "id": 2
     },
     {
       "name": "David Kipkoech",
@@ -26,14 +26,14 @@
       "contribution": 4000
     },
     {
-      "id": 7,
-      "name": "Grace Achieng",
-      "contribution": 3500
+      "name": "Grace Achieng Oneko",
+      "contribution": "3500",
+      "id": 7
     },
     {
-      "id": 8,
-      "name": "Henry Mugo",
-      "contribution": 6000
+      "name": "Henry Mwangi",
+      "contribution": "600000",
+      "id": 8
     },
     {
       "id": 9,
@@ -42,7 +42,7 @@
     },
     {
       "name": "Charles Karani",
-      "contribution": "10000",
+      "contribution": "100000",
       "id": 12
     },
     {

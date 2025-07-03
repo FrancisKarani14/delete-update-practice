@@ -140,7 +140,7 @@ function addUpdateButton() {
     })
       .then(res => res.json())
       .then(() => {
-        fetchMembers();        
+        // fetchMembers();        
         form.reset();          
         updateBtn.remove();    
         updateId = null;       
